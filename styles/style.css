@@ -15,14 +15,14 @@
   font-display: swap;
   font-family: "Roboto";
   font-weight: 400;
-  src: url("/fonts/roboto-v30-latin-regular.woff2") format("woff2");
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
   font-family: "Roboto";
   font-weight: 500;
-  src: url("/fonts/roboto-v30-latin-500.woff2") format("woff2");
+  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2");
 }
 
 :root {
@@ -161,7 +161,7 @@ ul {
 /* Hero-section */
 .hero-section {
   padding-bottom: 63px;
-  background-image: url(/img/background-main.jpg);
+  background-image: url(../img/background-main.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -311,7 +311,7 @@ ul {
     rgba(1, 28, 68, 0) 47.4%,
     rgba(1, 28, 68, 0.73) 82.66%,
     var(--color-primary-dark) 99.06%),
-    url(./img/mask.jpg);
+    url(../img/mask.jpg);
 }
 
 .services-card.injections {
@@ -321,7 +321,7 @@ ul {
     rgba(1, 28, 68, 0) 47.4%,
     rgba(1, 28, 68, 0.73) 82.66%,
     var(--color-primary-dark) 99.06%),
-    url(./img/injections.jpg);
+    url(../img/injections.jpg);
 }
 
 .services-card.cleaning {
@@ -331,7 +331,7 @@ ul {
     rgba(1, 28, 68, 0) 47.4%,
     rgba(1, 28, 68, 0.73) 82.66%,
     var(--color-primary-dark) 99.06%),
-    url(./img/cleaning.jpg);
+    url(../img/cleaning.jpg);
 }
 
 
