@@ -311,7 +311,7 @@ ul {
     rgba(1, 28, 68, 0) 47.4%,
     rgba(1, 28, 68, 0.73) 82.66%,
     var(--color-primary-dark) 99.06%),
-    url(../img/mask.jpg);
+    url(../img/masks.jpg);
 }
 
 .services-card.injections {
