@@ -10,12 +10,12 @@
 
 <body>
     <!-- Header -->
-    <header>
+    <header class="header">
         <div class="container">
             <div class="header-container">
                 <nav class="header-nav">
                     <a href="/"><img src="./img/logo.svg" alt="logo beauty zone"></a>
-                    <ul class="menu-list">
+                    <ul class="header-menu">
                         <li><a class="link" href="#reincarnation-section">Про нас</a></li>
                         <li><a class="link" href="#excellence-section">Чому ми</a></li>
                         <li><a class="link" href="#services-section">Наші процедури</a></li>
@@ -55,7 +55,7 @@
             <section class="hero-section">
                 <h3 class="hero-subtitle">Косметологічна клініка</h3>
                 <h1 lang="en" class="hero-title">beauty <br>zone</h1>
-                <button class="button button-hero" type="button">Замовити дзвінок</button>
+                <button class="button modal-btn-open" type="button">Замовити дзвінок</button>
                 <p class="hero-description">Запишись та отримай безкоштовну консультацію нашого косметолога</p>
             </section>
         </div>
@@ -81,10 +81,10 @@
                             молодість. З нами краса назавжди!</p>
                     </div>
                     <div class="reinkarnation-image">
-                        <img src="./img/mask-bevor.jpg" alt="face bevor">
+                        <img class="reinkarnation-foto" src="./img/mask-bevor.jpg" alt="face bevor">
                         <img src="./img/star-blue.svg" alt="picture star blue">
                         <img src="./img/star-little.svg" alt="picture star little">
-                        <img src="./img/mask-after.jpg" alt="face after">
+                        <img class="reinkarnation-foto" src="./img/mask-after.jpg" alt="face after">
                         <img src="./img/star-big.svg" alt="picture star big">
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                             </article>
                         </li>
                     </ul>
-                    <button class="carousel-button" type="button">
+                    <button class="carousel-button next" type="button">
                         <svg class="carousel-arrow" width="16" height="16">
                             <use href="./img/icons.svg#icon-arrow"></use>
                         </svg>
@@ -161,11 +161,11 @@
                         width="605" height="481" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <div class="form">
-                        <h3 class="form-text">Запишіться <span>безкоштовно</span> та отримайте подарунок</h3>
+                        <h3 class="form-text">Запишіться <span>безкоштовно</span> <br>та отримайте подарунок</h3>
                         <!-- Form -->
                         <button class="button button-contacts" type="button">Записатись безкоштовно</button>
-                        <p class="politik">Натискаючи на кнопку я погоджуюсь з <a class="politik" href="#"
-                                target="_blank">політикою
+                        <p class="politik">Натискаючи на кнопку я погоджуюсь <br><a class="politik" href="#"
+                                target="_blank"> з політикою
                                 конфіденційності</a></p>
                     </div>
                 </div>
@@ -186,40 +186,47 @@
                     </ul>
                 </nav>
                 <address class="footer-adress">
-                    <ul class="adress-list">
-                        <li><a class="address-link" href="tel:+38(096)0000007">+ 38 (096) 000 00 07</a></li>
-                        <li><a class="address-link" href="mailto:beautyzone@gmail.com">beautyzone@gmail.com</a></li>
-                        <li><a class="address-link" href="https://goo.gl/maps/PXz6VyNzHByhMrZs5"
-                                target="_blank">Україна, м.
-                                Київ, вул. Тараса Шевченка 5</a></li>
-                        <li><a class="address-link" href="tel:#">
+                    <div class="address-column">
+                        <ul class="adress-list">
+                            <li><a class="address-link" href="tel:+38(096)0000007">+ 38 (096) 000 00 07</a></li>
+                            <li><a class="address-link" href="mailto:beautyzone@gmail.com">beautyzone@gmail.com</a></li>
+                            <li><a class="address-link" href="https://goo.gl/maps/PXz6VyNzHByhMrZs5"
+                                    target="_blank">Україна, м.
+                                    Київ, вул. Тараса Шевченка 5</a></li>
+                        </ul>
+                        <div class="footer-icons">
+                            <a class="address-link" href="tel:#">
                                 <svg class="adress-icon" width="42" height="42">
                                     <use href="./img/icons.svg#icon-telephone"></use>
                                 </svg>
                             </a>
-                        </li>
-                        <li><a class="address-link" href="#" target="_blank">
+                            <a class="address-link" href="#" target="_blank">
                                 <svg class="adress-icon" width="42" height="42">
                                     <use href="./img/icons.svg#icon-facebook"></use>
                                 </svg>
                             </a>
-                        </li>
-                        <li><a class="address-link" href="#" target="_blank">
+                            <a class="address-link" href="#" target="_blank">
                                 <svg class="adress-icon" width="42" height="42">
                                     <use href="./img/icons.svg#icon-instagram-logo"></use>
                                 </svg>
                             </a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                     <div class="address-info">
                         <a class="address-link" href="#" target="_blank">Політика конфіденційності</a>
                         <p class="copyright">&copy; 2022 Дані захищені</p>
                     </div>
                 </address>
             </div>
-            <img src="./img/footer-medicine.jpg" alt="Two bottles with medicine">
         </div>
     </footer>
+    <div class="backdrop">
+        <div class="modal">
+            <button class="modal-btn-close" type="button"> Close</button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
