@@ -15,20 +15,21 @@
   font-display: swap;
   font-family: "Roboto";
   font-weight: 400;
-  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2");
+  src: url("/fonts/roboto-v30-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
   font-family: "Roboto";
   font-weight: 500;
-  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2");
+  src: url("/fonts/roboto-v30-latin-500.woff2") format("woff2");
 }
 
 :root {
   --color-brand: #2b7fff;
   --color-primary-dark: #011c44;
   --color-primary-light: #fff;
+  --color-background: #d9d9d9;
 }
 
 /* Base */
@@ -120,6 +121,7 @@ ul {
 /* Link */
 .link {
   color: var(--color-primary-dark);
+  transition: 0.3s;
 }
 
 .link:hover {
@@ -127,10 +129,18 @@ ul {
 }
 
 /* Header */
+
 .header-container {
+  position: absolute;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 40px;
+  z-index: 2;
+  width: 100%;
+  max-width: 1240px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 32px;
 }
 
 .header-nav {
@@ -138,9 +148,10 @@ ul {
   align-items: center;
   flex-grow: 1;
   gap: 40px;
+  padding-left: 100px;
 }
 
-.menu-list {
+.header-menu {
   font-weight: 700;
   display: flex;
   gap: 56px;
@@ -151,7 +162,8 @@ ul {
 .item-list {
   display: flex;
   gap: 32px;
-  justify-content: end;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .icon-header {
@@ -160,11 +172,19 @@ ul {
 
 /* Hero-section */
 .hero-section {
-  padding-bottom: 63px;
-  background-image: url(../img/background-main.jpg);
+  padding: 160px 63px 0 206px;
+  background-image: linear-gradient(
+      89deg,
+      var(--color-primary-light) 30.62%,
+      rgba(255, 255, 255, 0.85) 41.31%,
+      rgba(255, 255, 255, 0.19) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url(../img/background-main.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
   /* почему у меня не срабатывало как в видео, а только пришлось всю секцию в див положить с контейнером */
 }
 
@@ -177,6 +197,7 @@ ul {
 .hero-description {
   line-height: 1.5;
   font-size: 12px;
+  max-width: 238px;
 }
 
 .hero-subtitle {
@@ -185,7 +206,7 @@ ul {
   font-weight: 400;
 }
 
-.button-hero {
+.modal-btn-open {
   margin-bottom: 14px;
 }
 
@@ -198,9 +219,12 @@ ul {
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  /* Не сработал space-between!!!!!!!! */
 }
 
+.reinkarnation-foto {
+  border-radius: 328px;
+  background: var(--color-background);
+}
 .reinkarnation-text {
   max-width: 710px;
 }
@@ -271,6 +295,9 @@ ul {
   cursor: pointer;
 }
 
+.carousel-button.next {
+  transform: rotate(180deg);
+}
 .carousel-button:hover {
   background-color: var(--color-brand);
 }
@@ -279,7 +306,7 @@ ul {
 .services-container {
   display: flex;
   gap: 32px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .services-subtitle {
@@ -304,42 +331,48 @@ ul {
   align-items: end;
 }
 
+.services-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
 .services-card.mask {
   border-radius: 120px 4px;
   background-image: linear-gradient(
-    180deg,
-    rgba(1, 28, 68, 0) 47.4%,
-    rgba(1, 28, 68, 0.73) 82.66%,
-    var(--color-primary-dark) 99.06%),
+      180deg,
+      rgba(1, 28, 68, 0) 47.4%,
+      rgba(1, 28, 68, 0.73) 82.66%,
+      var(--color-primary-dark) 99.06%
+    ),
     url(../img/masks.jpg);
 }
 
 .services-card.injections {
   border-radius: 120px 4px;
   background-image: linear-gradient(
-    180deg,
-    rgba(1, 28, 68, 0) 47.4%,
-    rgba(1, 28, 68, 0.73) 82.66%,
-    var(--color-primary-dark) 99.06%),
+      180deg,
+      rgba(1, 28, 68, 0) 47.4%,
+      rgba(1, 28, 68, 0.73) 82.66%,
+      var(--color-primary-dark) 99.06%
+    ),
     url(../img/injections.jpg);
 }
 
 .services-card.cleaning {
   border-radius: 120px 4px;
   background-image: linear-gradient(
-    180deg,
-    rgba(1, 28, 68, 0) 47.4%,
-    rgba(1, 28, 68, 0.73) 82.66%,
-    var(--color-primary-dark) 99.06%),
+      180deg,
+      rgba(1, 28, 68, 0) 47.4%,
+      rgba(1, 28, 68, 0.73) 82.66%,
+      var(--color-primary-dark) 99.06%
+    ),
     url(../img/cleaning.jpg);
 }
 
-
-.services-description{
+.services-description {
   font-size: 22px;
   color: var(--color-primary-light);
   margin: 0 auto;
-  
 }
 
 /* Contacts-section */
@@ -356,6 +389,7 @@ ul {
   background-color: var(--color-primary-dark);
   border-radius: 32px;
   text-align: center;
+  align-items: center;
 }
 
 .contacts-subtitle {
@@ -366,7 +400,7 @@ ul {
   font-size: 22px;
   color: var(--color-primary-light);
   font-weight: 600;
-}
+  }
 
 .form-text span {
   color: var(--color-brand);
@@ -386,7 +420,25 @@ ul {
 
 /* Footer */
 .footer {
-  padding: 48px 0 56px 0;
+  padding: 48px 0 0 0;
+  position: relative;
+  max-width: 1272px;
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer::after {
+  background-image: url(../img/footer-decor.png);
+  position: absolute;
+  width: 247px;
+  height: 152px;
+  background-size: 100%;
+  content: "";
+  right: 24px;
+  bottom: 0;
+  background-repeat: no-repeat;
 }
 
 .footer-container {
@@ -399,6 +451,18 @@ ul {
 .footer-adress {
   flex-basis: 50%;
   display: flex;
+}
+
+.footer-adress {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.footer-icons {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
 }
 
 .footer-logo,
@@ -416,6 +480,11 @@ ul {
   /* не  работает  мб */
 }
 
+.footer-icons {
+  display: flex;
+  gap: 16px;
+}
+
 .address-link {
   color: var(--color-primary-light);
   font-size: 16px;
@@ -427,8 +496,50 @@ ul {
   fill: var(--color-primary-light);
 }
 
+.address-info {
+  text-align: right;
+  padding-right: 100px;
+}
+
 .copyright,
 .politik {
   color: #747272;
   font-size: 13px;
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 31, 74, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  width: 100%;
+  max-width: 724px;
+  height: 100%;
+  max-height: 680px;
+  background-color: var(--color-primary-dark);
+  border-radius: 48px;
+  position: relative;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 42px;
+  right: 42px;
 }
