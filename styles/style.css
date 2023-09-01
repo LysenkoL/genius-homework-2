@@ -383,6 +383,7 @@ ul {
 .contacts-container {
   display: flex;
   gap: 32px;
+  justify-content: space-between;
 }
 
 .form {
@@ -390,6 +391,9 @@ ul {
   border-radius: 32px;
   text-align: center;
   align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 423px;
 }
 
 .contacts-subtitle {
